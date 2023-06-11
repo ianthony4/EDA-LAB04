@@ -1,9 +1,11 @@
 public class DoubleLinkList<T>{
   Node<T> head;
   Node<T> end;
+  int len;
   public DoubleLinkList(){
     head = null;
     end = null;
+    len = 0;
   }
   public void addFirst(T data){
     Node<T> aux = new Node<T>(data);
@@ -13,6 +15,7 @@ public class DoubleLinkList<T>{
       head.setPreviousNode(aux);
     aux.setNextNode(head);
     head = aux;
+    len++;
 
   }
   public void add(T data){
@@ -24,6 +27,7 @@ public class DoubleLinkList<T>{
       aux.setPreviousNode(end);
     }
     end = aux;
+    len++;
 
   }
   public T delFirst(){
@@ -36,6 +40,7 @@ public class DoubleLinkList<T>{
       head.getNextNode().setPreviousNode(null);
     // Desconectamos ambos nodos
     head = head.getNextNode();
+    len--;
     // Que elemento se elimino ->
     return aux.getData();
   }
@@ -48,9 +53,14 @@ public class DoubleLinkList<T>{
     else // El anterior nodo al ultimo tendra como siguiente nodo un nulo
       end.getPreviousNode().setNextNode(null);
     end = end.getPreviousNode();
+    len--;
     // Que elemento eliminamos
     return aux.getData();
 
+  }
+  public T get(int i){
+    Node<T> aux = this.head;
+    return null;
   }
   public boolean isEmpty(){
     return end == null;

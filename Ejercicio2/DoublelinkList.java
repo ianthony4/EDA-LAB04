@@ -6,7 +6,12 @@ public class DoubleLinkList<T>{
     end = null;
   }
   public void addFirst(T data){
-    Node<T> aux = new Node<T>(data, head, null);
+    Node<T> aux = new Node<T>(data);
+    if(this.isEmpty())
+      end = aux;
+    else
+      head.setPreviousNode(aux);
+    aux.setNextNode(head);
     head = aux;
 
   }
@@ -14,7 +19,6 @@ public class DoubleLinkList<T>{
     Node<T> aux = new Node<T>(data);
     if(this.isEmpty()) {
       head = aux;
-      end = head.getNextNode();
     }else{
       aux.setNextNode(end);
     }

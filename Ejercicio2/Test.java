@@ -1,12 +1,18 @@
 public class Test{
   public static void main(String[] args){
-    DoubleLinkList<Integer> nums = generarPeorCaso(10);
-    nums.set(5, 0);
-    nums.set(9, 9);
-    System.out.println("El mismo indice: " + nums.get(5) + " == " + nums.get(9));
-    System.out.println("Elementos " + nums);
-    System.out.println("Elementos " + nums);
+    int tamano;		        
+    Scanner teclado = new Scanner( System.in );
+    System.out.print( "Introduzca el tamaño máximo del último arreglo: " );
+    tamano = teclado.nextInt();
 
+    ArrayList<int[]> casos = new ArrayList<int[]>();        
+    for(int n=1; n<=tamano; n++) {
+      casos.add(generarPeorCaso(n));
+    }        
+    Iterator<int[]> puntero = casos.iterator();
+    while(puntero.hasNext()){
+      System.out.println(insertionSort(puntero.next()));
+    }
   }
   public static DoubleLinkList<Integer> generarPeorCaso(int t) {
     DoubleLinkList<Integer> nums = new DoubleLinkList<Integer>();

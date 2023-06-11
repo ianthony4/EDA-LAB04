@@ -92,6 +92,37 @@ public class DoubleLinkList<T>{
     }
     return data;
   }
+public T set(int ind, T data){
+    if(ind >= len)
+      return null;
+    if(ind > (len/2))
+      data = this.setByEnd(ind, data);
+    else
+      data = this.setByHead(ind, data);
+    return data;
+  }
+  public T setByHead(int ind, T data){
+    Node<T> aux = head;
+    for(int i = 0; i < this.len; i++){
+      if(i == ind){
+        aux.setData(data);
+        break;
+      }
+      aux = aux.getNextNode();
+    }
+    return data;
+  }
+  public T setByEnd(int ind, T data){
+    Node<T> aux = end;
+    for(int i = len; i > 0; i--){
+      if(i == ind){
+        aux.setData(data);
+        break;
+      }
+      aux = aux.getPreviousNode();    
+    }
+    return data;
+  }
   public boolean isEmpty(){
     return len == 0;
   }

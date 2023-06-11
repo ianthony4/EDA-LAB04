@@ -8,12 +8,11 @@ public class DoubleLinkList<T>{
     len = 0;
   }
   public void addFirst(T data){
-    Node<T> aux = new Node<T>(data);
+    Node<T> aux = new Node<T>(data, head, null);
     if(this.isEmpty())
       end = aux;
     else
       head.setPreviousNode(aux);
-    aux.setNextNode(head);
     head = aux;
     len++;
 

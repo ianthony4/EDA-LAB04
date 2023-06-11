@@ -58,9 +58,39 @@ public class DoubleLinkList<T>{
     return aux.getData();
 
   }
-  public T get(int i){
-    Node<T> aux = this.head;
-    return null;
+  public T get(int ind){
+    T data = null;
+    if(ind >= len)
+      return null;
+    if(ind > (len/2))
+      data = this.getByEnd(ind);
+    else
+      data = this.getByHead(ind);
+    return data;
+  }
+  public T getByHead(int ind){
+    Node<T> aux = head;
+    T data = null;
+    for(int i = 0; i < this.len; i++){
+      if(i == ind){
+        data = aux.getData();
+        break;
+      }
+      aux.getNextNode();
+    }
+    return data;
+  }
+  public T getByEnd(int ind){
+    Node<T> aux = end;
+    T data = null;
+    for(int i = len; i > 0; i--){
+      if(i == ind){
+        data = aux.getData();
+        break;
+      }
+      aux.getPreviousNode();    
+    }
+    return data;
   }
   public boolean isEmpty(){
     return end == null;

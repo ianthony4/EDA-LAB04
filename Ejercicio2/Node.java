@@ -24,4 +24,22 @@ public class Node <E > {
     this.previousNode = previousNode;
   }      
   /* Getters y Setter ... */
+  public E getData() {
+    return data;
+  }
+  public void setData(E data) {
+    this.data = data;
+  }
+  public Node<E> getNextNode() {
+    return nextNode;
+  }
+  public void setNextNode(Node<E> nextNode) {
+    this.nextNode = nextNode;
+  }
+  public Node<E> getPreviousNode() {
+    return previousNode;
+  }
+  public void setPreviousNode(Node<E> previousNode) {
+    this.previousNode = previousNode;
+  }
 }

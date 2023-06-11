@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Test{
   public static void main(String[] args){
     int tamano;		        
@@ -5,11 +7,11 @@ public class Test{
     System.out.print( "Introduzca el tamaño máximo del último arreglo: " );
     tamano = teclado.nextInt();
 
-    ArrayList<int[]> casos = new ArrayList<int[]>();        
+    ArrayList<DoubleLinkList<Integer>> casos = new ArrayList<DoubleLinkList<Integer>>();        
     for(int n=1; n<=tamano; n++) {
       casos.add(generarPeorCaso(n));
     }        
-    Iterator<int[]> puntero = casos.iterator();
+    Iterator<DoubleLinkList<Integer>> puntero = casos.iterator();
     while(puntero.hasNext()){
       System.out.println(insertionSort(puntero.next()));
     }

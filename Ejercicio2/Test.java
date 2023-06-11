@@ -13,4 +13,11 @@ public class Test{
     nums.delLast();
     System.out.println("Elementos " + nums);
   }
+  public static int[] generarPeorCaso(int t) {
+    int[] lista= new int[t];
+    for (int i=0; i<t; i++) {
+      lista[i] = t-i;
+    }
+    return lista;
+  }
 }

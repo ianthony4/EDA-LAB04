@@ -91,7 +91,7 @@ public class DoubleLinkList<T>{
     }
     return data;
   }
-public T set(int ind, T data){
+  public T set(int ind, T data){
     if(ind >= len)
       return null;
     if(ind > (len/2))

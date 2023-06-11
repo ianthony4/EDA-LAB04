@@ -17,9 +17,9 @@ public class DoubleLinkList<T>{
   }
   public void add(T data){
     Node<T> aux = new Node<T>(data);
-    if(this.isEmpty()) {
+    if(this.isEmpty())
       head = aux;
-    }else{
+    else{
       end.setNextNode(aux);
       aux.setPreviousNode(end);
     }
@@ -30,8 +30,10 @@ public class DoubleLinkList<T>{
     if(this.isEmpty())
       return null;
     Node<T> aux = head;
-    // el segundo nodo tendra como anterior nodo un nulo
-    head.getNextNode().setNextNode(null);
+    if(head == end)
+      end = null;
+    else // el segundo nodo tendra como anterior nodo un nulo
+      head.getNextNode().setPreviousNode(null);
     // Desconectamos ambos nodos
     head = head.getNextNode();
     aux.setNextNode(null);

@@ -10,6 +10,7 @@ public class Test{
     System.out.println("Elementos " + nums);
     nums.delFirst();
     nums.delFirst();
+    nums.delFirst();
     System.out.println("Elementos " + nums);
   }
 }

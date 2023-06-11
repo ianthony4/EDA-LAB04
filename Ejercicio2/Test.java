@@ -9,8 +9,8 @@ public class Test{
     System.out.println("Esta vacio? " + nums.isEmpty());
     System.out.println("Elementos " + nums);
     nums.delFirst();
-    nums.delFirst();
-    nums.delFirst();
+    nums.delLast();
+    nums.delLast();
     System.out.println("Elementos " + nums);
   }
 }

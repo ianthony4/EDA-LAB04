@@ -1,10 +1,14 @@
-public DoubleLinkList<T>{
+public class DoubleLinkList<T>{
   Node<T> head;
   public DoubleLinkList(){
-    head = new Node();
+    head = new Node<T>();
   }
   public T add(T data){
-    Node<T> aux = new Node(data)
+    return null;
+      
+  }
+  public boolean isEmpty(){
+    return head == null;
   }
   
 }

@@ -20,9 +20,9 @@ public class DoubleLinkList<T>{
     if(this.isEmpty()) {
       head = aux;
     }else{
-      aux.setNextNode(end);
+      end.setNextNode(aux);
+      aux.setPreviousNode(end);
     }
-    aux.setPreviousNode(end);
     end = aux;
 
   }

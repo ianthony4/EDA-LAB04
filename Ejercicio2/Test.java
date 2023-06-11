@@ -11,11 +11,11 @@ public class Test{
     }
     return nums;
   }
-  public static long insertionSort(int[] A) {
+  public static long insertionSort(DoubleLinkList<Integer> A) {
     int key;
     int i;
     long nano_startTime = System.nanoTime();
-    for(int j=1; j<A.length; j=j+1) {
+    for(int j = 1; j < A.length; j++) {
       key = A[j];
       //Insertar A[j] en la secuencia ordenada A[1..j-1]
       i = j-1;

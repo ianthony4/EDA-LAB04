@@ -26,6 +26,18 @@ public class DoubleLinkList<T>{
     end = aux;
 
   }
+  public T delFirst(){
+    if(this.isEmpty())
+      return null;
+    Node<T> aux = head;
+    // el segundo nodo tendra como anterior nodo un nulo
+    head.getNextNode().setNextNode(null);
+    // Desconectamos ambos nodos
+    head = head.getNextNode();
+    aux.setNextNode(null);
+    // Que elemento se elimino ->
+    return aux.getData();
+  }
   public boolean isEmpty(){
     return end == null;
   }

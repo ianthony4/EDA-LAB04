@@ -83,7 +83,7 @@ public class DoubleLinkList<T>{
   public T getByEnd(int ind){
     Node<T> aux = end;
     T data = null;
-    for(int i = len; i > 0; i--){
+    for(int i = (len - 1); i > 0; i--){
       if(i == ind){
         data = aux.getData();
         break;
@@ -114,7 +114,7 @@ public T set(int ind, T data){
   }
   public T setByEnd(int ind, T data){
     Node<T> aux = end;
-    for(int i = len; i > 0; i--){
+    for(int i = (len - 1); i > 0; i--){
       if(i == ind){
         aux.setData(data);
         break;

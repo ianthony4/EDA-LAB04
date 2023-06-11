@@ -23,10 +23,10 @@ public class Test{
       //Insertar A[j] en la secuencia ordenada A[1..j-1]
       i = j-1;
       while(i > -1 && A.get(i) > key) {
-        /// A.get(i+1) = A.get(i);
+        A.set(i+1, A.get(i));
         i = i-1;
       }
-      // A[i+1] = key;
+      A.set(i+1, key);
       //imprimirArreglo(A);
     }
     long nano_endTime = System.nanoTime();

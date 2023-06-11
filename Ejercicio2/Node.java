@@ -45,6 +45,6 @@ public class Node<E> {
 
   // ToString
   public String toString(){
-    return this.data;
+    return this.data.toString();
   }
 }

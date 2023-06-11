@@ -14,7 +14,7 @@ public class DoubleLinkList<T>{
     Node<T> aux = new Node<T>(data);
     if(this.isEmpty()) {
       head = aux;
-      end = head.getNextNode()
+      end = head.getNextNode();
     }
     else
       end.setNextNode(aux);
@@ -25,9 +25,9 @@ public class DoubleLinkList<T>{
   }
 
   // toString
-  public class toString(){
+  public String toString(){
     String str = "";
-    for(Node<E> aux = this.head; aux != null; aux = aux.getNextNode())
+    for(Node<T> aux = this.head; aux != null; aux = aux.getNextNode())
       str += aux.toString() + " ";
     return str;
   }

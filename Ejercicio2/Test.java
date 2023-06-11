@@ -6,6 +6,7 @@ public class Test{
     System.out.println("El mismo indice: " + nums.get(5) + " == " + nums.get(9));
     System.out.println("Elementos " + nums);
     System.out.println("Elementos " + nums);
+
   }
   public static DoubleLinkList<Integer> generarPeorCaso(int t) {
     DoubleLinkList<Integer> nums = new DoubleLinkList<Integer>();
@@ -27,7 +28,7 @@ public class Test{
         i = i-1;
       }
       A.set(i+1, key);
-      //imprimirArreglo(A);
+      //System.out.println(A);
     }
     long nano_endTime = System.nanoTime();
     return nano_endTime - nano_startTime;

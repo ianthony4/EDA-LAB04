@@ -42,4 +42,9 @@ public class Node<E> {
   public void setPreviousNode(Node<E> previousNode) {
     this.previousNode = previousNode;
   }
+
+  // ToString
+  public String toString(){
+    return this.data;
+  }
 }

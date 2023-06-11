@@ -76,7 +76,7 @@ public class DoubleLinkList<T>{
         data = aux.getData();
         break;
       }
-      aux.getNextNode();
+      aux = aux.getNextNode();
     }
     return data;
   }
@@ -88,7 +88,7 @@ public class DoubleLinkList<T>{
         data = aux.getData();
         break;
       }
-      aux.getPreviousNode();    
+      aux = aux.getPreviousNode();    
     }
     return data;
   }

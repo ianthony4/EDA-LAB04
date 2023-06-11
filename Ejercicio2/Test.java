@@ -1,7 +1,7 @@
 public class Test{
   public static void main(String[] args){
     DoubleLinkList<Integer> nums = generarPeorCaso(10);
-    System.out.println("El mismo indice: " + nums.get(1) + " == " + nums.get(2));
+    System.out.println("El mismo indice: " + nums.get(2) + " == " + nums.get(2));
     System.out.println("Elementos " + nums);
     System.out.println("Elementos " + nums);
   }

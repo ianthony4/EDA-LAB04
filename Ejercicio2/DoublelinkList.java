@@ -93,7 +93,10 @@ public class DoubleLinkList<T>{
     return data;
   }
   public boolean isEmpty(){
-    return end == null;
+    return len == 0;
+  }
+  public int length(){
+    return this.len;
   }
 
   // toString

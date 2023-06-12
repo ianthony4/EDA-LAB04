@@ -13,10 +13,27 @@ public class LinkedList<E extends Comparable<E>> implements TDAList<E> {
     public boolean isEmpty(){
         return this.first == null;
     } 
-    
+
     @Override
     public void insertFirst(E x){
         this.first = new Node<E>(x, this.first);
+        size++;
+    }
+
+    @Override
+    public void insertLast(E x){
+        //Si la lista esta vacia solo inserto X al inicio
+        if(this.isEmpty()){
+            insertFirst(x);
+        }else{
+            //Recorro la lista hasta llegar al ultimo elemento y hago uso/referencio al siguiente nodo
+            Node<E> aux = this.first;
+            while(aux.getNext() != null){
+                aux = aux.getNext();
+            }
+            aux.setNext(new Node<E>(x));
+        }
+        //aumento el tamaño
         size++;
     }
     

@@ -94,5 +94,14 @@ public class LinkedList<E extends Comparable<E>> implements TDAList<E> {
         }    
         return aux;
     }
+
+    @Override
+    public String toString() {
+        String str = "";
+        for (Node<E> aux = this.first; aux != null; aux = aux.getNext()) {
+            str += aux.toString() + ", ";
+        }
+        return str;
+    }
     
 }

@@ -21,4 +21,16 @@ public class Test {
         }
         System.out.println(list);
     }
+
+    //Este metodo genera la lista de los peores casos
+    public static LinkedList<Integer> generarPeorCaso(int t) {
+        LinkedList<Integer> list = new LinkedList<>();
+        // Va insertando al primer elemento con insertFirst
+        // para i = 5 -> primero inserta 1, luego inserta 2 como primero desplazando al 1 y de esa manera
+        // la lista queda asi : [5,4,3,2,1]
+        for (int i = 0; i < t; i++) {
+            list.insertFirst(i + 1);
+        }
+        return list;
+    }
 }

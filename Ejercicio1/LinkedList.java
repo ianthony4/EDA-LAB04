@@ -66,5 +66,24 @@ public class LinkedList<E extends Comparable<E>> implements TDAList<E> {
         }
         size++;
     }
+
+    @Override
+    public void insert(E x, int p){
+        //Si la lista esta vacia lo insertamos en la primera posicion
+        if(this.isEmpty() || p == 0){
+            insertFirst(x);
+        }else{
+            //De lo contrario recorro hasta la posicion anterior p -1 
+            Node<E> aux = this.first;
+            // El "next" tiene que ser diferente de null
+            for(int i = 0; i < p - 1 && aux.getNext() != null; i++){
+                aux = aux.getNext();
+            }
+            // cambio el next por el dato que se insertara, y en ese next coloco el next de p-1
+            aux.setNext(new Node<E>(x, aux.getNext()));
+        }
+        //aumento de tamaño
+        size++;
+    }
     
 }

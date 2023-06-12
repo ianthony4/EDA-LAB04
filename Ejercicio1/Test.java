@@ -47,6 +47,8 @@ public class Test {
         params.set("ylabel", "'tiempo en nanosegundos'");
         params.set("grid");
         p.setParameters(params);
+        //Graficamos
+        p.plot();
         
 
 

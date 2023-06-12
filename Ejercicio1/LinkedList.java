@@ -45,5 +45,26 @@ public class LinkedList<E extends Comparable<E>> implements TDAList<E> {
         }
         return aux != null;
     }
+
+    @Override
+    public void remove(E x){
+        //Solo se elimina si list no esta vacio y si el elemento se encuentra en la lista
+        if(!this.isEmpty()){
+            if(!this.first.getDato().equals(x)){
+                this.first = first.getNext();
+            }
+        }else{
+            Node<E> aux = this.first;
+            //Recorremos hasta llegar al elemento anterior del que se va a eliminar
+            while(aux.getNext() != null && !aux.getNext().getDato().equals(x)){
+                aux = aux.getNext();
+            }
+            // cambio el nodo siguiente de ese nodo por el de la posicion siguiente
+            if(aux.getNext() != null){
+                aux.setNext(aux.getNext().getNext());
+            }
+        }
+        size++;
+    }
     
 }

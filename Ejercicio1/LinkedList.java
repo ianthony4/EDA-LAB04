@@ -85,5 +85,12 @@ public class LinkedList<E extends Comparable<E>> implements TDAList<E> {
         //aumento de tamaño
         size++;
     }
+
+    public Node<E> get(int indice) {
+        Node<E> aux = this.first;
+        for (int i = 0; i < indice; i++)
+            aux = aux.getNext();
+        return aux;
+    }
     
 }

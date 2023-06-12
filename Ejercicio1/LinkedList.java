@@ -1,5 +1,8 @@
 public class LinkedList<E extends Comparable<E>> implements TDAList<E> {
+    
+    //referencia al primer nodo
     Node<E> first;
+    //Tamaño actual de la lista
     int size;
     
     //Constructor

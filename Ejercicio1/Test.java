@@ -12,7 +12,23 @@ public class Test {
         PrintStream grafico = new PrintStream("insercion.dat");
         //Calculo del tiempo en hacer toda la prueba
         long inicioSimulacion = System.nanoTime();
-         
+        for (int i = 2; i <= PRUEBAS; i++) {
+            //generamos una lista del peor caso con esa cantidad de elementos 
+            LinkedList<Integer> list = generarPeorCaso(i);
+            //inicio del tiempo
+            insercionInicio = System.nanoTime();
+            insertionSort(list); //ordenamos la lista
+            //fin del tiempo
+            insercionFin = System.nanoTime(); 
+            //calculamos el tiempo total
+            insercionTotal = insercionFin - insercionInicio;
+            //En el archivo se crean 2 columnas
+            
+            grafico.print(i); // 1ra columna - numero de elementos
+            grafico.print(" - "); // separador
+            grafico.print(insercionTotal); // 2da columna - tiempo (nanosegundos) para ese numero de elementos (i)
+            grafico.println(); //salto de linea
+        }
     }
 
     //Este metodo realiza el ordenamiento (INSERTION)

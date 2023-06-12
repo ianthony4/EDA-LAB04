@@ -29,6 +29,11 @@ public class Test {
             grafico.print(insercionTotal); // 2da columna - tiempo (nanosegundos) para ese numero de elementos (i)
             grafico.println(); //salto de linea
         }
+        grafico.close();
+        long finSimulacion = System.nanoTime();
+        long totalSimulacion = finSimulacion - inicioSimulacion;
+        double minutosTotales = (double) totalSimulacion / 1_000_000_000 / 60;
+        
     }
 
     //Este metodo realiza el ordenamiento (INSERTION)

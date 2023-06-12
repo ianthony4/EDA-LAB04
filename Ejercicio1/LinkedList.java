@@ -36,5 +36,14 @@ public class LinkedList<E extends Comparable<E>> implements TDAList<E> {
         //aumento el tamaño
         size++;
     }
+
+    @Override
+    public boolean search(E x){
+        Node<E> aux = this.first;
+        while(aux != null &&  !aux.getDato().equals(x)){
+            aux = aux.getNext();
+        }
+        return aux != null;
+    }
     
 }

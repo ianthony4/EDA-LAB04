@@ -86,10 +86,12 @@ public class LinkedList<E extends Comparable<E>> implements TDAList<E> {
         size++;
     }
 
+    //Este metodo retorna un elemento en cierto indice
     public Node<E> get(int indice) {
         Node<E> aux = this.first;
-        for (int i = 0; i < indice; i++)
+        for (int i = 0; i < indice; i++){
             aux = aux.getNext();
+        }    
         return aux;
     }
     

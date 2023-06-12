@@ -41,7 +41,15 @@ public class Test {
         p.addPlot("\"insercion.dat\" with lines"); 
         //le damos un titulo
         p.setTitle("EDA - EJERCICIO 01 : ORDENAMIENTO DE LISTA ENLAZADA SIMPLE");
+        //PARAMETROS PARA QUE LA GRAFICA SEA ENTENDIBLE
+        GNUPlotParameters params = p.getParameters();
+        params.set("xlabel", "'Cantidad de datos'");
+        params.set("ylabel", "'tiempo en nanosegundos'");
+        params.set("grid");
+        p.setParameters(params);
         
+
+
     }
 
     //Este metodo realiza el ordenamiento (INSERTION)

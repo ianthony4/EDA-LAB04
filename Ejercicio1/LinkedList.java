@@ -14,4 +14,10 @@ public class LinkedList<E extends Comparable<E>> implements TDAList<E> {
         return this.first == null;
     } 
     
+    @Override
+    public void insertFirst(E x){
+        this.first = new Node<E>(x, this.first);
+        size++;
+    }
+    
 }

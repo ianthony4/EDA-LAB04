@@ -32,7 +32,10 @@ public class Test {
         grafico.close();
         long finSimulacion = System.nanoTime();
         long totalSimulacion = finSimulacion - inicioSimulacion;
+        //Calculo del tiempo total en minutos
         double minutosTotales = (double) totalSimulacion / 1_000_000_000 / 60;
+        System.out.println("Tiempo total de la prueba : "+ minutosTotales+" minutos");
+
         
     }
 

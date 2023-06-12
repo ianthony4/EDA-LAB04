@@ -1,4 +1,6 @@
-import java.io.PrintStream;
+import java.io.*;
+import com.panayotis.gnuplot.GNUPlotParameters;
+import com.panayotis.gnuplot.JavaPlot;
 
 public class Test {
     public static void main(String[] args) throws Exception{
@@ -8,7 +10,7 @@ public class Test {
         long insercionInicio, insercionFin, insercionTotal;
 
         PrintStream grafico = new PrintStream("insercion.dat");
-        
+
     }
 
     //Este metodo realiza el ordenamiento (INSERTION)

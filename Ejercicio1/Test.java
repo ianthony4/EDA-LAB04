@@ -1,9 +1,14 @@
+import java.io.PrintStream;
 
 public class Test {
-    public static void main(String[] args){
+    public static void main(String[] args) throws Exception{
         //Aqui se aplicaran las prubas
         int PRUEBAS = 2000;
+        //variables de tiempo de ordenamiento para cada lista
+        long insercionInicio, insercionFin, insercionTotal;
 
+        PrintStream grafico = new PrintStream("insercion.dat");
+        
     }
 
     //Este metodo realiza el ordenamiento (INSERTION)

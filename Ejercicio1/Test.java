@@ -25,7 +25,7 @@ public class Test {
             //En el archivo se crean 2 columnas
             
             grafico.print(i); // 1ra columna - numero de elementos
-            grafico.print(" - "); // separador
+            grafico.print(" "); // separador
             grafico.print(insercionTotal); // 2da columna - tiempo (nanosegundos) para ese numero de elementos (i)
             grafico.println(); //salto de linea
         }

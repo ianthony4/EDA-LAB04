@@ -8,9 +8,11 @@ public class Test {
         int PRUEBAS = 2000;
         //variables de tiempo de ordenamiento para cada lista
         long insercionInicio, insercionFin, insercionTotal;
-
+        //Creacion del grafico
         PrintStream grafico = new PrintStream("insercion.dat");
-
+        //Calculo del tiempo en hacer toda la prueba
+        long inicioSimulacion = System.nanoTime();
+         
     }
 
     //Este metodo realiza el ordenamiento (INSERTION)

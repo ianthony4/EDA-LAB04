@@ -49,9 +49,6 @@ public class Test {
         p.setParameters(params);
         //Graficamos
         p.plot();
-        
-
-
     }
 
     //Este metodo realiza el ordenamiento (INSERTION)

@@ -35,7 +35,12 @@ public class Test {
         //Calculo del tiempo total en minutos
         double minutosTotales = (double) totalSimulacion / 1_000_000_000 / 60;
         System.out.println("Tiempo total de la prueba : "+ minutosTotales+" minutos");
-
+        //PARA LA GRAFICA
+        JavaPlot p = new JavaPlot();
+        //leemos el archivo
+        p.addPlot("\"insercion.dat\" with lines"); 
+        //le damos un titulo
+        p.setTitle("EDA - EJERCICIO 01 : ORDENAMIENTO DE LISTA ENLAZADA SIMPLE");
         
     }
 

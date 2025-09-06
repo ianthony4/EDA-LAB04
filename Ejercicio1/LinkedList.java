@@ -69,7 +69,7 @@ public class LinkedList<E extends Comparable<E>> implements TDAList<E> {
         }
         size++;
     }
-
+// ME PICAN LOS COCOS
     @Override
     public void insert(E x, int p){
         //Si la lista esta vacia lo insertamos en la primera posicion
@@ -98,13 +98,7 @@ public class LinkedList<E extends Comparable<E>> implements TDAList<E> {
         return aux;
     }
 
-    @Override
-    public String toString() {
-        String str = "";
-        for (Node<E> aux = this.first; aux != null; aux = aux.getNext()) {
-            str += aux.toString() + ", ";
-        }
-        return str;
+    
     }
     
 }
